@@ -1,0 +1,5 @@
+{
+  "name": "DriveReader AI",
+  "description": "An advanced document reader that transforms your text files into lifelike speech using Gemini 2.5 TTS. Features customizable voices, real-time audio visualization, and a focus on reading long-form content.",
+  "requestFramePermissions": []
+}
