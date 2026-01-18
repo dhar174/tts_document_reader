@@ -16,13 +16,13 @@ export const DriveBrowser: React.FC<DriveBrowserProps> = ({ onFileSelect, onCanc
 
   // Check for stored client ID on mount
   useEffect(() => {
-    const storedId = localStorage.getItem("drive_client_id")?.trim() || DEFAULT_CLIENT_ID;
-
-    if (storedId) {
-      setClientId(storedId);
-      // Auto-attempt initialization if we have an ID
-      initialize(storedId);
-    }
+  const storedId = localStorage.getItem("drive_client_id")?.trim();
+  if (storedId) {
+    setClientId(storedId);
+    initialize(storedId);
+} else {
+  setClientId(DEFAULT_CLIENT_ID);
+}
   }, []);
 
   const initialize = async (id: string) => {
